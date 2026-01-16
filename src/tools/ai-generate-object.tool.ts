@@ -59,7 +59,7 @@ export class AiGenerateObject extends ToolBase<AiGenerateObjectArgsType> {
           messagesSearchTag: args.messagesSearchTag,
         },
       );
-      options.messages = convertToModelMessages(messages);
+      options.messages = await convertToModelMessages(messages);
     }
 
     const document: Block | undefined = parent.getDocument(

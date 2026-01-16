@@ -62,7 +62,7 @@ export class AiGenerateText extends ToolBase<AiGenerateTextArgsType> {
           messagesSearchTag: args.messagesSearchTag,
         },
       );
-      options.messages = convertToModelMessages(messages, {
+      options.messages = await convertToModelMessages(messages, {
         tools: options.tools,
       });
     }
